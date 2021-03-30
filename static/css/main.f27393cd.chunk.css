@@ -1,0 +1,2 @@
+:root{--primary-font:"Poppins",sans-serif;--secondary-font:"Cabin",sans-serif;--primary-color:#6282c7;--secondary-color:#0f0061}body{background:#f2f2f2;margin:0;font-family:"Poppins",sans-serif;font-family:var(--primary-font);color:#6282c7;color:var(--primary-color)}h1,h2,h3,h4{color:#0f0061;color:var(--secondary-color);text-shadow:0 0 5px rgba(0,0,0,.25)}.App{text-align:center}@media screen and (min-width:567px){.App{width:50%;margin:0 auto}}
+/*# sourceMappingURL=main.f27393cd.chunk.css.map */

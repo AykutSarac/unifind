@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/unifind/static/css/main.f27393cd.chunk.css",
+    "main.js": "/unifind/static/js/main.55ed828e.chunk.js",
+    "main.js.map": "/unifind/static/js/main.55ed828e.chunk.js.map",
+    "runtime-main.js": "/unifind/static/js/runtime-main.9d283da4.js",
+    "runtime-main.js.map": "/unifind/static/js/runtime-main.9d283da4.js.map",
+    "static/js/2.ce54cfa3.chunk.js": "/unifind/static/js/2.ce54cfa3.chunk.js",
+    "static/js/2.ce54cfa3.chunk.js.map": "/unifind/static/js/2.ce54cfa3.chunk.js.map",
+    "index.html": "/unifind/index.html",
+    "static/css/main.f27393cd.chunk.css.map": "/unifind/static/css/main.f27393cd.chunk.css.map",
+    "static/js/2.ce54cfa3.chunk.js.LICENSE.txt": "/unifind/static/js/2.ce54cfa3.chunk.js.LICENSE.txt",
+    "static/media/empty.c8301e2a.svg": "/unifind/static/media/empty.c8301e2a.svg",
+    "static/media/loading.108ddaf3.svg": "/unifind/static/media/loading.108ddaf3.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9d283da4.js",
+    "static/js/2.ce54cfa3.chunk.js",
+    "static/css/main.f27393cd.chunk.css",
+    "static/js/main.55ed828e.chunk.js"
+  ]
+}
