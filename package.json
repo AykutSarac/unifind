@@ -3,7 +3,7 @@
   "author": "AykutSarac",
   "version": "0.1.0",
   "description": "Search for universities around the world.",
-  "homepage": "https://github.com/AykutSarac/unifind",
+  "homepage": "https://aykutsarac.github.io/unifind",
   "bugs": "https://github.com/AykutSarac/unifind/issues",
   "dependencies": {
     "@material-ui/core": "^4.11.3",
@@ -21,7 +21,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -44,5 +46,8 @@
   "keywords": [
     "unifind",
     "university"
-  ]
+  ],
+  "devDependencies": {
+    "gh-pages": "^3.1.0"
+  }
 }
