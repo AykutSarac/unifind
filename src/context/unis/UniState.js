@@ -1,5 +1,4 @@
 import React, { useReducer } from 'react'
-import axios from 'axios'
 import UniContext from './uniContext'
 import UniReducer from './UniReducer'
 import {
@@ -9,10 +8,32 @@ import {
     SET_ERROR
 } from '../types'
 
+// List of universities [Source]: https://github.com/Hipo/university-domains-list
+import uniDB from './uniDB.json'
+
+
+// Convert Turkish characters to latin
+function turkishToEnglish(text) {
+    return text.replace('Ğ', 'g')
+        .replace('Ü', 'u')
+        .replace('Ş', 's')
+        .replace('I', 'i')
+        .replace('İ', 'i')
+        .replace('Ö', 'o')
+        .replace('Ç', 'c')
+        .replace('ğ', 'g')
+        .replace('ü', 'u')
+        .replace('ş', 's')
+        .replace('ı', 'i')
+        .replace('ö', 'o')
+        .replace('ç', 'c');
+}
+
 const UniState = (props) => {
 
     const initialState = {
         unis: [],
+        suggestion: null,
         loading: false,
         error: false
     }
@@ -20,12 +41,13 @@ const UniState = (props) => {
     const [state, dispatch] = useReducer(UniReducer, initialState);
 
     // Search Universities
-    const searchUnis = async (name) => {
+    const searchUnis = (name) => {
 
         setLoading();
-        const res = await axios.get(`http://universities.hipolabs.com/search?name=${name}`);
+        const NAME_TR = turkishToEnglish(name).toUpperCase();
+        const data = uniDB.filter(uni => turkishToEnglish(uni.name).toUpperCase().includes(NAME_TR));
 
-        if (res.data.length === 0) {
+        if (data.length === 0) {
             setError(true);
         } else {
             setError(false);
@@ -33,7 +55,7 @@ const UniState = (props) => {
 
         dispatch({
             type: SEARCH_UNIS,
-            payload: res.data.slice(0, 100)
+            payload: data.slice(0, 100)
         });
     }
 
